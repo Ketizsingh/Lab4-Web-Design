@@ -14,3 +14,11 @@ input {
     outline: none;
     text-align: center;
 }
+
+
+span#notification {
+    font-size: smaller;
+    font-family: monospace;
+    color: darkcyan;
+    padding: 0px;
+}
