@@ -52,7 +52,7 @@ function removeEntry(Id,index)
     Names.splice(index, 1);  //to Names value from array
     document.getElementById(Id).remove()
 
-    document.getElementById('notification').innerHTML = 'Entry Removed Successfully...';
+    document.getElementById('notification').innerHTML = 'Removed Successfully...';
 
 
 }
