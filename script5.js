@@ -1,25 +1,22 @@
-console.log("Hello World");
-function onEnterPressed(event)
-{
-    if(event.key !== "Enter")
-    {
-     return;
+function onEnterPressed(event) {
+    if(event.key !== "Enter") {
+        return;
     }
     addRow();
     cleanEntry();
-} 
-function addRow()
-{
-    console.log("You pressed enter");
-    var name =  document.getElementById("name").value;
-       var abcd=`
-    <tr>
-    <td>${name}</td>
-    </tr>
+}
+
+function addRow() {
+    var name = document.getElementById('name').value;
+
+    var snippet = `
+        <tr><td>${name}</td></tr>
     `;
-    document.getElementById("entries").innerHTML += abcd;
+
+    document.getElementById('entries').innerHTML += snippet;
 }
-function cleanEntry()
-{
-    document.getElementById("name").value = ""
+
+function cleanEntry() {
+    document.getElementById('name').value = ""
 }
+
