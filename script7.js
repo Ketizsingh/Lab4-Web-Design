@@ -14,11 +14,7 @@ var Names = [];
 function addRow() {
     var name = document.getElementById('name').value;
 
-
- 
-
-
-    Names.push(name);
+    Names.push(name); //here we push values to 
 
     alert('Entry Successful, Press Refresh')
 
@@ -27,36 +23,26 @@ function addRow() {
 
 
 
-function refreshTable(){
-
-
+function refreshTable()
+{
     document.getElementById('entries').innerHTML = '';
-
-var code = '';
-
-Names.forEach(name => {
-    
-    var snippet = `
-    <tr id="${nextId}">
-        <td onclick="removeEntry(${nextId})"><img src="images/delete.png"></td>
-        <td>${name}</td>
-    </tr>
-`;
-
-document.getElementById('entries').innerHTML += snippet;
-   
-    nextId++
-
-
-});
-
-
+    var code = '';
+    Names.forEach(name => {
+        var snippet = `
+            <tr id="${nextId}">
+                <td onclick="removeEntry(${nextId})"><img src="images/delete.png"></td>
+                <td>${name}</td>
+            </tr>
+        `;
+        document.getElementById('entries').innerHTML += snippet;
+        nextId++
+    });
 }
 
 
-function removeEntry(Id){
-
-
+function removeEntry(Id) 
+{
+    delete Names[Id];
     document.getElementById(Id).remove()
 }
 
